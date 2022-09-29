@@ -1,185 +1,185 @@
-.LoginCOntainer {
-    width: 25%;
-    margin: auto;
-    border: 2px solid rgb(213, 211, 211);
-    padding: 10px;
-    border-radius: 16px;
-    margin-top: 2%;
-  }
-  
-  .HeadLogo {
-    display: flex;
-    border-bottom: 2px solid rgb(204, 204, 204);
-    padding: 5px 5px;
-    align-items: center;
-  }
-  .HeadLogo img {
-    width: 58%;
-  }
-  
-  .HeadLogo button {
-    background: none;
-  }
-  
-  .backbtn {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 28%;
-  }
-  
-  .LoginForm {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .LoginForm h2 {
-    margin: 10px 0px 30px 0px;
-  }
-  
-  .IconDiv {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-  }
-  
-  .IconDiv svg {
-    margin-right: 10px;
-    margin-left: 15%;
-    font-size: 20px;
-  }
-  
-  .orDiv {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    color: rgb(165, 165, 165);
-  }
-  
-  .orDiv > div:nth-child(1),
-  .orDiv > div:nth-child(3) {
-    width: 45%;
-    height: 15px;
-    border-bottom: 1px solid rgb(178, 178, 178);
-  }
-  
-  .InputDiv {
-    width: 80%;
-    margin: auto;
-    margin-top: 3%;
-  }
-  
-  .InputDiv input {
-    padding-left: 10%;
-  }
-  
-  .InputDiv > input:nth-child(1) {
-    background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/email-mobile.svg")
-      left center / 19px 25px no-repeat;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    height: 50px;
-  }
-  .InputDiv > input:nth-child(2) {
-    background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
-      left center / 19px 25px no-repeat;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    height: 50px;
-  }
-  
-  .InputDiv input[type="email"]::placeholder {
-    padding-left: 5%;
-  }
-  .InputDiv input[type="password"]::placeholder {
-    padding-left: 5%;
-  }
-  
-  .SubmitButton {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-  }
-  
-  .SubmitButton button {
-    border-radius: 10px;
-    border: 1px solid rgb(0, 166, 255);
-    color: rgb(0, 89, 255);
-  }
-  
-  .TakingtoSignIn {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-    text-align: center;
-  }
-  
-  .TakingtoSignIn div h1 {
-    color: rgb(33, 125, 244);
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .InputDiv2 {
-    width: 80%;
-    margin: auto;
-    margin-top: 3%;
-  }
-  
-  .InputDiv2 input {
-    padding-left: 10%;
-  }
-  
-  .InputDiv2 > input:nth-child(1) {
-    background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/email.svg")
-      left center / 19px 25px no-repeat;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    height: 50px;
-  }
-  .InputDiv2 > input:nth-child(2) {
-    background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
-      left center / 19px 25px no-repeat;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    height: 50px;
-  }
-  .InputDiv2 > input:nth-child(3) {
-    background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
-      left center / 19px 25px no-repeat;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    height: 50px;
-  }
-  
-  .InputDiv2 input[type="email"]::placeholder {
-    padding-left: 10%;
-  }
-  
-  .InputDiv2 input[type="password"]::placeholder {
-    padding-left: 10%;
-  }
-  
-  .TC {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-  }
-  
-  .TC div {
-    display: flex;
-    font-size: 16px;
-  }
-  
-  .TC div input {
-    margin-top: 7px;
-    margin-right: 16px;
-  }
+.LoginContainor {
+  width: 28%;
+  margin: auto;
+  border: 2px solid rgb(213, 211, 211);
+  padding: 10px;
+  border-radius: 16px;
+  margin-top: 2%;
+}
+
+.HeadLogo {
+  display: flex;
+  border-bottom: 2px solid rgb(204, 204, 204);
+  padding: 5px 5px;
+  align-items: center;
+}
+.HeadLogo img {
+  width: 55%;
+}
+
+.HeadLogo button {
+  background: none;
+}
+
+.backbtn {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right:25%;
+}
+
+.LoginForm {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.LoginForm h2 {
+  margin: 10px 0px 30px 0px;
+}
+
+.IconDiv {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.IconDiv svg {
+  margin-right: 10px;
+  margin-left: 15%;
+  font-size: 20px;
+}
+
+.orDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: rgb(165, 165, 165);
+}
+
+.orDiv > div:nth-child(1),
+.orDiv > div:nth-child(3) {
+  width: 45%;
+  height: 15px;
+  border-bottom: 1px solid rgb(178, 178, 178);
+}
+
+.InputDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.InputDiv input {
+  padding-left: 10%;
+}
+
+.InputDiv > input:nth-child(1) {
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/email-mobile.svg")
+    left center / 19px 25px no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+  height: 50px;
+}
+.InputDiv > input:nth-child(2) {
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
+    left center / 19px 25px no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+  height: 50px;
+}
+
+.InputDiv input[type="email"]::placeholder {
+  padding-left: 5%;
+}
+.InputDiv input[type="password"]::placeholder {
+  padding-left: 5%;
+}
+
+.SubmitButton {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.SubmitButton button {
+  border-radius: 10px;
+  border: 1px solid rgb(0, 166, 255);
+  color: rgb(0, 89, 255);
+}
+
+.TakingtoSignIn {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.TakingtoSignIn div h1 {
+  color: rgb(33, 125, 244);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.InputDiv2 {
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.InputDiv2 input {
+  padding-left: 10%;
+}
+
+.InputDiv2 > input:nth-child(1) {
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/email.svg")
+    left center / 19px 25px no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+  height: 50px;
+}
+.InputDiv2 > input:nth-child(2) {
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
+    left center / 19px 25px no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+  height: 50px;
+}
+.InputDiv2 > input:nth-child(3) {
+  background: url("https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg")
+    left center / 19px 25px no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+  height: 50px;
+}
+
+.InputDiv2 input[type="email"]::placeholder {
+  padding-left: 10%;
+}
+
+.InputDiv2 input[type="password"]::placeholder {
+  padding-left: 10%;
+}
+
+.TC {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.TC div {
+  display: flex;
+  font-size: 16px;
+}
+
+.TC div input {
+  margin-top: 7px;
+  margin-right: 16px;
+}
