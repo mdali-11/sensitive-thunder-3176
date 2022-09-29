@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Roboto&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap");
+
+.NavbarMainDiv {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.NavLinks {
+  display: flex;
+  gap: 8px;
+  /* border: 2px solid red; */
+  margin-left: 10%;
+  width: 65%;
+}
+.NavLinks a {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height: 26px;
+}
+
+.NavLinks a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid red;
+}
+
+.Navlinks_btn1 {
+  background-color: rgb(230, 240, 251);
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 0px 12px;
+  text-align: center;
+  display: block;
+  color: rgb(46, 148, 244);
+}
+
+.NavLinks_btn2 {
+  background-color: rgb(255, 191, 0);
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 0px 15px 2px 15px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.SearchIcondiv {
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+.searchModal {
+  display: flex;
+  margin-top: 35px;
+}
+
+.MenuContainer {
+  margin-top: 4%;
+}
+
+.megamenu{
+    width:100%;
+    height: 200px;
+    padding: 141px;
+    margin-top: -10px;
+    justify-content: space-between;
+    border:none;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 100px;
+
+}
+.megalist{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: -10px;
+    border: none;
+}
+
+.megamenu div{
+    margin-top: -100px;
+    display: flex;
+    flex-direction:column;
+    line-height: 3rem;
+}
+
+
+.HeadLogo {
+    display: flex;
+    border-bottom: 2px solid rgb(204, 204, 204);
+    padding: 5px 5px;
+    align-items: center;
+  }
+  .HeadLogo img {
+    width: 55%;
+  }
+  
+  .HeadLogo button {
+    background: none;
+  }
+  
+  .backbtn {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right:25%;
+  }
+
+
+
+
+.MenuItem{
+    background-color:transparent;
+}
+
+
+
+
+
+.MenuFirstDiv {
+  display: flex;
+  width: 57%;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.allUi {
+  width: 18%;
+  /* border: 2px solid red; */
+}
+
+
+
+
+
+
+
+.allUi li {
+  list-style: none;
+  line-height: 35px;
+  font-family: "Fira Sans", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.allUi li:hover {
+  text-decoration: underline;
+  color: rgb(154, 2, 2);
+}
+
+.MenuFirstDiv ul button {
+  margin-top: 15px;
+}
+
+.ForBoldLi {
+  font-weight: bold;
+}
+
+hr {
+  width: 62%;
+  border: 1.5px solid rgb(182, 181, 181);
+  background-color: rgb(184, 184, 184);
+}
+
+/* ============================================================================================================ */
+
+/* ==========Before Media Queries Hidden Classes ====================== */
+
+.Media_logo_medium_screen {
+  display: none;
+}
+
+.MenuIconBtn_medium {
+  display: none;
+}
+
+.Subscribe_button {
+  display: none;
+}
+/* ============================================================================================================ */
+
+/* ============ MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 768px) and (min-width: 433px) {
+  .NavbarMainDiv {
+    width: 100%;
+  }
+  .NavLinks {
+    display: none;
+  }
+
+  .Media_logo_medium_screen {
+    display: inline;
+    width: 160px;
+  }
+
+  .Media_logo_medium_screen div {
+    width: 180px;
+    height: 40px;
+    display: flex;
+  }
+
+  .MenuIconBtn {
+    display: none;
+  }
+
+  .MenuIconBtn_medium {
+    display: block;
+    padding: 0px;
+  }
+
+  .NavbarMainDiv {
+    justify-content: unset;
+  }
+
+  .SearchIcondiv {
+    display: none;
+  }
+
+  .Subscribe_button_main {
+    margin-left: 40%;
+    width: 20%;
+    box-sizing: border-box;
+  }
+
+  .Subscribe_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .Subscribe_button button {
+    background-color: rgb(255, 179, 0);
+    padding: 0px 10px;
+    border-radius: 20px;
+    color: black;
+    box-sizing: border-box;
+  }
+
+  .Subscribe_button div img {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .NavLinks_btn1 {
+    margin: 10px 0px;
+  }
+
+  .Black_modal_inner_logo {
+    width: 35%;
+    margin: auto;
+  }
+
+  .MenuContainer h3 {
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  .Media_logo_medium_screen_1 {
+    border-bottom: 1px solid rgb(87, 86, 86);
+    display: flex;
+    width: 100%;
+    padding: 6px 0px;
+  }
+
+  .MultyLang {
+    border-top: 1px solid gray;
+  }
+  .MultyLang li {
+    list-style: none;
+    font-weight: bold;
+    line-height: 35px;
+  }
+
+  .Inner_subscribe_btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+}
+
+/* ==================================================================================================== */
+/* ===========Small Screens ============== */
+
+@media only screen and (max-width: 430px) and (min-width: 60px) {
+  .NavbarMainDiv {
+    width: 100%;
+  }
+  .NavLinks {
+    display: none;
+  }
+
+  .Media_logo_medium_screen {
+    display: inline;
+    width: 160px;
+  }
+
+  .Media_logo_medium_screen div {
+    width: 180px;
+    height: 40px;
+    display: flex;
+  }
+
+  .MenuIconBtn {
+    display: none;
+  }
+
+  .MenuIconBtn_medium {
+    display: block;
+    padding: 0px;
+  }
+
+  .NavbarMainDiv {
+    justify-content: unset;
+  }
+
+  .SearchIcondiv {
+    display: none;
+  }
+
+  .Subscribe_button_main {
+    margin-left: 20%;
+    width: 20%;
+    box-sizing: border-box;
+  }
+
+  .Subscribe_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .Subscribe_button button {
+    background-color: rgb(255, 179, 0);
+    padding: 0px 10px;
+    border-radius: 20px;
+    color: black;
+    box-sizing: border-box;
+  }
+
+  .Subscribe_button div img {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .NavLinks_btn1 {
+    margin: 10px 0px;
+  }
+
+  .Black_modal_inner_logo {
+    width: 35%;
+    margin: auto;
+  }
+
+  .MenuContainer h3 {
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  .Media_logo_medium_screen_1 {
+    border-bottom: 1px solid rgb(87, 86, 86);
+    display: flex;
+    width: 100%;
+    padding: 6px 0px;
+  }
+
+  .MultyLang {
+    border-top: 1px solid gray;
+  }
+  .MultyLang li {
+    list-style: none;
+    font-weight: bold;
+    line-height: 35px;
+  }
+
+  .Inner_subscribe_btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+}
