@@ -96,10 +96,10 @@ const Login = () => {
         </div>
 
         <div>
-          <img
+        <Link to="/"><img
             src="	https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/indian-express-logo-n.svg"
             alt="Indian-express-logo"
-          />
+          /></Link>
         </div>
         </div>
 
