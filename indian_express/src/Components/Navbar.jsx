@@ -177,7 +177,8 @@ export default function Navbar() {
             </div>
 
 
-            <div className={style.HeadLogo}>
+            {/* <div className={style.HeadLogo}> */}
+            <Flex w="full" align="center" justify="center">
                 <div className={style.backbtn}>
                     {/* <ArrowBackIcon /> */}
                     <Box>
@@ -185,16 +186,19 @@ export default function Navbar() {
                     <Text fontSize={12} fontWeight="10px">EPAPER | TODAY’S PAPER</Text>
                     </Box>
                 </div>
+                {/* <Spacer /> */}
 
-                <Box paddingTop={5}><Link to="/">
-                    <img
+                <Box style={{display:"flex", flexDirection:"column" ,alignItem:"center",justifyContent:"center"}}><Link to="/">
+                    <img style={{marginTop:"20px"}}
                         src="https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg"
                         alt="Indian-express-logo"
                     />
                     </Link>
-                    <Text fontWeight="bold" mt={1} fontSize={15} ml={70}>JOURNALISM OF COURAGE</Text>
+                    <Text align="center" fontWeight="bold" fontSize={15}>JOURNALISM OF COURAGE</Text>
                 </Box>
-            </div>
+                <Spacer />
+                <Box></Box>
+            </Flex>
 
 
             <Flex alignItems="center" justify="center" py={2} bg="gray.50" my={0.5}>
