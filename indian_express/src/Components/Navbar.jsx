@@ -192,7 +192,7 @@ export default function Navbar() {
                         alt="Indian-express-logo"
                     />
                     </Link>
-                    <Text fontWeight="bold" mt={1} fontSize={15} ml={65}>JOURNALISM OF COURAGE</Text>
+                    <Text fontWeight="bold" mt={1} fontSize={15} ml={70}>JOURNALISM OF COURAGE</Text>
                 </Box>
             </div>
 
