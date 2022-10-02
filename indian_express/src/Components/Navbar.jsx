@@ -1,36 +1,40 @@
 // import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Text } from "@chakra-ui/react";
 import style from "../Components/Navbar.module.css";
+import { useContext } from "react";
 import Footer from "./Footer";
+import { AppContext } from "../Context/AppContext";
+import Home from "./Home";
 import {
     Box,
-    Spacer ,
+    Spacer,
     Menu,
     MenuButton,
     MenuList,
 } from '@chakra-ui/react'
-import {   Flex, Button,  HStack , chakra} from '@chakra-ui/react';
+import { Flex, Button, HStack, chakra } from '@chakra-ui/react';
 import React from "react";
 import {
-    HamburgerIcon,CloseIcon,
+    HamburgerIcon, CloseIcon,
     // ArrowBackIcon
 } from "@chakra-ui/icons";
 
-const data=[
+const data = [
     {
-        label:"Home",
+        label: "Home",
     },
     {
-        label:"Home",
+        label: "English",
     }, {
-        label:"Home",
+        label: "Hindi",
     }, {
-        label:"Home",
+        label: "Bengali",
     },
 ]
 // const date=Date.now().toLocaleString();
-let current_date=new Date();
-let e_date=current_date.toDateString()
+let current_date = new Date();
+let e_date = current_date.toDateString()
 
 const CTA = "Get Started"
 
@@ -38,13 +42,14 @@ const CTA = "Get Started"
 export default function Navbar() {
 
 
+    const {isAuth}=useContext(AppContext)
 
 
     return (
         <div>
             <div className={style.NavbarMainDiv}>
                 <div className={style.MenuIconBox}>
-                    <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <Menu>
                             {({ isOpen }) => (
                                 <>
@@ -133,33 +138,32 @@ export default function Navbar() {
                                 </>
                             )}
                         </Menu>
-
                         <chakra.header id="header">
-      <Flex
-        w="full"
-        px="3"
-        py="3"
-        align="center"
-        justify="space-between"
-      >
-      
-        <HStack as="nav" spacing="5">
-          {data.map((item, i) => (
-            <Link key={i}>
-              <Button variant="nav"> {item.label} </Button>
-            </Link>
-          ))}
-        </HStack>
-        <HStack>
-          <Button color="white"
-          colorScheme="red"
-          marginLeft="800px">
-            {CTA}
-          </Button>
-        </HStack>
-        
-      </Flex>
-    </chakra.header>
+                            <Flex
+                                w="full"
+                                px="3"
+                                py="3"
+                                align="center"
+                                justify="space-between"
+                            >
+                                <Box spacing="5">
+                                    {data.map((item, i) => (
+                                        <Link key={i}>
+                                            <Button variant="nav"> {item.label} </Button>
+                                        </Link>
+                                    ))}
+                                </Box>
+                                <Spacer />
+                                <HStack>
+                                    <Button color="white"
+                                        colorScheme="red"
+                                        marginLeft="800px">
+                                        {CTA}
+                                    </Button>
+                                </HStack>
+
+                            </Flex>
+                        </chakra.header>
                     </div>
 
 
@@ -176,46 +180,49 @@ export default function Navbar() {
             <div className={style.HeadLogo}>
                 <div className={style.backbtn}>
                     {/* <ArrowBackIcon /> */}
-                    <Button>
+                    <Box>
                         <Link to="#">{e_date}</Link>
-                    </Button>
+                    <Text fontSize={12} fontWeight="10px">EPAPER | TODAY’S PAPER</Text>
+                    </Box>
                 </div>
 
-                <div><Link to ="/">
+                <Box paddingTop={5}><Link to="/">
                     <img
-                        src="	https://indianexpress.com/wp-content/themes/indianexpress/images/evolok/indian-express-logo-n.svg"
+                        src="https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg"
                         alt="Indian-express-logo"
-                    /></Link>
-                </div>
+                    />
+                    </Link>
+                    <Text fontWeight="bold" mt={1} fontSize={15} ml={65}>JOURNALISM OF COURAGE</Text>
+                </Box>
             </div>
-             
 
-            <Flex  alignItems="center" justify="center" py={2} bg="gray.50" my={0.5}>
-                <Box style={{display:"flex",gap:"10px",marginLeft:"25px"}}>
-                <Link  to="#">Home</Link>
-                <Link to="#">Explained</Link>
-                <Link to="#">Political Pulse</Link>
-                <Link to="#">India</Link>
-                <Link to="#">Cities</Link>
-                <Link to="#">Opinion</Link>
-                <Link to="#">Entertainment</Link>
-                <Link to="#">Lifestyle</Link>
-                <Link to="#">Technology</Link>
-                <Link to="#">Video</Link>
-                <Link to="#">Sports</Link>
-                <Link to="#">Audio</Link>
-                <Link to="#">Education</Link>
-                <Link to="#">Premium</Link>
-                <Link to="#">Investigation</Link>
+
+            <Flex alignItems="center" justify="center" py={2} bg="gray.50" my={0.5}>
+                <Box style={{ display: "flex", gap: "10px", marginLeft: "25px" }}>
+                    <Link to="#">Home</Link>
+                    <Link to="#">Explained</Link>
+                    <Link to="#">Political Pulse</Link>
+                    <Link to="#">India</Link>
+                    <Link to="#">Cities</Link>
+                    <Link to="#">Opinion</Link>
+                    <Link to="#">Entertainment</Link>
+                    <Link to="#">Lifestyle</Link>
+                    <Link to="#">Technology</Link>
+                    <Link to="#">Video</Link>
+                    <Link to="#">Sports</Link>
+                    <Link to="#">Audio</Link>
+                    <Link to="#">Education</Link>
+                    <Link to="#">Premium</Link>
+                    <Link to="#">Investigation</Link>
                 </Box>
-              <Spacer />
-                <Box gap="15px"> 
+                <Spacer />
+                <Box gap="15px">
                     <Button color="black" bg="orange.300" mx={2}>Subscribe</Button>
-                   <Link to="login"> <Button color="black" bg="orange.300" mx={2}>Login</Button></Link>
-                 
+                    <Link to="login"> <Button color="black" bg="orange.300" mx={2}>{isAuth?"My Account" : "Sign In"}</Button></Link>
+
                 </Box>
 
-             </Flex> 
+            </Flex>
             {/* <div style={{ display: "flex", gap: "20px", marginLeft: "70px" }}>
                 <Link to="#">Home</Link>
                 <Link to="#">Explained</Link>
@@ -235,9 +242,9 @@ export default function Navbar() {
             </div> */}
 
 
+            <Home />
 
-
-<Footer />
+            <Footer />
 
         </div>
     )
