@@ -69,7 +69,7 @@ const {handleisAuth}=useContext(AppContext)
     setSubmit([...submit, signInCreds]);
     setSignInCreds("");
     setIsUser(true);
-    alert("Thank! You're Successfully Signed In to Indian Express");
+    alert("You're Successfully Signed Up to Indian Express");
   };
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const {handleisAuth}=useContext(AppContext)
 
     if(check(submit,obj))
     {
-            alert(`Thank! You're Successfully Signed In to Indian Express`);
+            alert(`You're Successfully Signed In to Indian Express`);
             handleisAuth();
             navigate("/");
             
