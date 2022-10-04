@@ -97,14 +97,17 @@ const {handleisAuth,isAuth}=useContext(AppContext)
   //     [name]: value,
   //   });
   // };
-
+  let obj={
+    email,
+    password,
+  }
 
   const HandleLogInSubmit = () => {
     console.log("submit", submit);
     onOpen()
 
 
-    if(check(submit,email,password))
+    if(check(submit,obj))
     {
             // alert(`You're Successfully Signed In to Indian Express`);
             handleisAuth();
