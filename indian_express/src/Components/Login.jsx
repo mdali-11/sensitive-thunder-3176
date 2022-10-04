@@ -82,7 +82,7 @@ const {handleisAuth,isAuth}=useContext(AppContext)
     setSubmit([...submit, signInCreds]);
     setSignInCreds("");
     setIsUser(true);
-    alert("You're Successfully Signed Up to Indian Express");
+    // alert("You're Successfully Signed Up to Indian Express");
   };
 
   useEffect(() => {
@@ -105,7 +105,6 @@ const {handleisAuth,isAuth}=useContext(AppContext)
   const HandleLogInSubmit = () => {
     console.log("submit", submit);
     onOpen()
-
 
     if(check(submit,obj))
     {
@@ -274,9 +273,7 @@ const {handleisAuth,isAuth}=useContext(AppContext)
                 value={email}
                 placeholder="Insert your registered Email/Phone"
                 type="email"
-                onChange={(e)=>{
-                  e.preventDefault();
-                  setEmail(e.target.value)}}
+                onChange={(e)=>setEmail(e.target.value)}
               />
               <Input
                 variant="flushed"
@@ -284,9 +281,7 @@ const {handleisAuth,isAuth}=useContext(AppContext)
                 value={password}
                 placeholder="Password"
                 type="password"
-                onChange={(e)=>{
-                  e.preventDefault();
-                  setPassword(e.target.value)}}
+                onChange={(e)=>setPassword(e.target.value)}
               />
             </div>
 
@@ -304,7 +299,8 @@ const {handleisAuth,isAuth}=useContext(AppContext)
         motionPreset="slideInBottom"
         leastDestructiveRef={cancelRef}
         onClose={onClose}
-        isOpen={isOpen}        
+        isOpen={isOpen}
+        
       >
         <AlertDialogOverlay />
 
@@ -382,9 +378,36 @@ const {handleisAuth,isAuth}=useContext(AppContext)
             </div>
 
             <div className={style.SubmitButton}>
-              <Button size="lg" w="100%" onClick={HandleSignInSubmit}>
+              {/* <Button size="lg" w="100%" onClick={HandleSignInSubmit}>
                 Register
-              </Button>
+              </Button> */}
+              <Button color="white" size="lg" w="100%" onClick={()=>{
+                HandleSignInSubmit();
+                onOpen()
+              }}>
+        Register
+      </Button>
+      <AlertDialog
+        motionPreset="slideInBottom"
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+        isOpen={isOpen}
+      >
+        <AlertDialogOverlay />
+
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            Sign Up Successfull
+          </AlertDialogHeader>
+          <AlertDialogCloseButton />
+
+          <AlertDialogFooter>
+            <Button ref={cancelRef} onClick={onClose}>
+              Ok
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
             </div>
 
             <div className={style.TakingtoSignIn}>
@@ -405,14 +428,23 @@ const {handleisAuth,isAuth}=useContext(AppContext)
 export default Login;
 
 function check(submit,login){
+  let flag=false;
   for (let i = 0; i < submit.length; i++) {
     if (
       login.email === submit[i].email &&
       login.password === submit[i].password
     ){
-      return true;
+      flag=true;
     }
-    return false;
+    else{
+      flag=false;
+    }
+  }
+  if(flag){
+    return true;
+  }
+  else{
+    return false
   }
 
 }

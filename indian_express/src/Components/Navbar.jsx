@@ -42,7 +42,7 @@ const CTA = "Get Started"
 export default function Navbar() {
 
 
-    const {isAuth}=useContext(AppContext)
+    const {isAuth,handleisAuth}=useContext(AppContext)
 
 
     return (
@@ -157,9 +157,11 @@ export default function Navbar() {
                                 <HStack>
                                     <Button color="white"
                                         colorScheme="red"
-                                        marginLeft="800px">
+                                        marginLeft={isAuth?"750px":"800px"}
+                                        >
                                         {CTA}
                                     </Button>
+                                    {isAuth?<Button colorScheme="red" color="white" onClick={()=>handleisAuth()}>Logout</Button>:""}  
                                 </HStack>
 
                             </Flex>
