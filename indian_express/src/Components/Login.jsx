@@ -13,6 +13,17 @@ import {
   Button
 
 } from "@chakra-ui/react";
+import {
+  useDisclosure,
+  AlertDialog,
+  // Button,
+  AlertDialogOverlay,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogCloseButton,
+  AlertDialogFooter,
+  // AlertDialogBody
+} from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook, FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,7 +42,9 @@ const getData = () => {
 
 
 const Login = () => {
-const {handleisAuth}=useContext(AppContext)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+const {handleisAuth,isAuth}=useContext(AppContext)
 
   useEffect(() => {
     document.title = "Login Page: Latest News, India News, Breaking News, Today's News Headlines Online, English News Top Stories, Coronavirus News, IPL 2022 Updates|The Indian Express";
@@ -84,23 +97,22 @@ const {handleisAuth}=useContext(AppContext)
   //     [name]: value,
   //   });
   // };
-  let obj={
-    email,
-    password,
-  }
+
 
   const HandleLogInSubmit = () => {
     console.log("submit", submit);
+    onOpen()
 
-    if(check(submit,obj))
+
+    if(check(submit,email,password))
     {
-            alert(`You're Successfully Signed In to Indian Express`);
+            // alert(`You're Successfully Signed In to Indian Express`);
             handleisAuth();
-            navigate("/");
-            
-          } else {
-            alert(`Wrong Email Or Password`);
-          }
+            // navigate("/"); 
+          }  
+          // else {
+            // alert(`Wrong Email Or Password`);
+          // }
    
     // setLogin([...login, loginCreds]);
     //  console.log("Login", login);
@@ -259,7 +271,9 @@ const {handleisAuth}=useContext(AppContext)
                 value={email}
                 placeholder="Insert your registered Email/Phone"
                 type="email"
-                onChange={(e)=>setEmail(e.target.value)}
+                onChange={(e)=>{
+                  e.preventDefault();
+                  setEmail(e.target.value)}}
               />
               <Input
                 variant="flushed"
@@ -267,14 +281,50 @@ const {handleisAuth}=useContext(AppContext)
                 value={password}
                 placeholder="Password"
                 type="password"
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={(e)=>{
+                  e.preventDefault();
+                  setPassword(e.target.value)}}
               />
             </div>
 
             <div className={style.SubmitButton}>
-              <Button size="lg" w="100%" onClick={HandleLogInSubmit}>
+              {/* <Button size="lg" w="100%" onClick={HandleLogInSubmit}>
                 Log In
-              </Button>
+              </Button> */}
+              <Button size="lg" w="100%" color="white" onClick={()=>{
+                HandleLogInSubmit();
+                onOpen();
+              }}>
+        Login
+      </Button>
+      <AlertDialog
+        motionPreset="slideInBottom"
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+        isOpen={isOpen}        
+      >
+        <AlertDialogOverlay />
+
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            {/* {" "}
+            Do you Agree with terms and conditions ?{" "} */}
+            {isAuth?"Login Successfull" :"Please Enter Correct Details"}
+          </AlertDialogHeader>
+          <AlertDialogCloseButton />
+
+          <AlertDialogFooter>
+          {/* ref={cancelRef} used in ok button  */}
+            {isAuth?<Button bg="red" color="white"  onClick={() => navigate("/")}>
+              Ok
+            </Button>:
+       
+            <Button onClick={onClose}  colorScheme="red" ml={3}>
+              Close
+            </Button>}
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
             </div>
 
             <div className={style.TakingtoSignIn}>
